@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<blank:Application
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:blank="org.foomo.zugspitze.examples.applications.blank.*"
+	layout="absolute"
+	height="100%"
+	width="100%"
+	>
+	<mx:Style source="assets/css/Application.css"/>
+</blank:Application>

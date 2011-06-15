@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.foomo.org/zugspitze" xsi:schemaLocation="http://www.foomo.org/zugspitze http://foomo.bestbytes.net/zugspitze/scaffold.xsd">
+	<id>org.foomo.zugspitze.flex3.examples</id>
+	<type>Implementation Project</type>
+	<name>Flex 3 Examples</name>
+	<description>Flex 3 Examples.</description>
+	<dependencies>
+		<id>org.foomo.zugspitze.core</id>
+		<id>org.foomo.zugspitze.flex3</id>
+	</dependencies>
+	<applications>
+
+		<application>
+			<id>org.foomo.zugspitze.flex3.examples.applications.blank</id>
+			<name>Blank Application</name>
+			<description>This is a blank application skeleton.</description>
+			<package>org.foomo.zugspitze.examples.applications.blank</package>
+			<sources>
+				<path>src/BlankApplication.mxml</path>
+				<path>src/assets/css/Application.css</path>
+				<path>src/org/foomo/zugspitze/examples/applications/blank</path>
+			</sources>
+		</application>
+
+		<application>
+			<id>org.foomo.zugspitze.flex3.examples.applications.simple</id>
+			<name>Simple Application</name>
+			<description>This is a simple mvc application example.</description>
+			<package>org.foomo.zugspitze.examples.applications.simple</package>
+			<sources>
+				<path>src/SimpleApplication.mxml</path>
+				<path>src/assets/css/Application.css</path>
+				<path>src/org/foomo/zugspitze/examples/applications/simple</path>
+			</sources>
+		</application>
+
+		<application>
+			<id>org.foomo.zugspitze.flex3.examples.components.blank</id>
+			<name>Blank Component</name>
+			<description>This is a blank component skeleton.</description>
+			<package>org.foomo.zugspitze.examples.components.blank</package>
+			<sources>
+				<path>src/org/foomo/zugspitze/examples/components/blank</path>
+			</sources>
+		</application>
+
+	</applications>
+</config>

@@ -1,0 +1,18 @@
+/* CSS file */
+
+Application {
+	backgroundColor: #868B8E;
+}
+
+ApplicationView {
+	fillAlphas: 1, 1;
+	fillColors: #F3F3F3, #D5D5D5;
+	borderStyle: applicationControlBar;
+	horizontalCenter: 0;
+	verticalCenter: 0;
+	cornerRadius: 5;
+	paddingBottom: 20;
+	paddingRight: 50;
+	paddingLeft: 50;
+	paddingTop: 20;
+}

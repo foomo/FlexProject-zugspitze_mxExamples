@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:controllers="org.foomo.zugspitze.examples.applications.commands.controllers.*"
+	xmlns:counter="org.foomo.zugspitze.examples.components.counter.*"
+	xmlns:model="org.foomo.zugspitze.examples.zugspitzComponent.model.*"
+	xmlns:view="org.foomo.zugspitze.examples.zugspitzComponent.view.*"
+	enabled="{!StatusManager.getInstance().busy}"
+	currentState="loading"
+	width="100%"
+	height="100%"
+	>
+	<mx:Script>
+		<![CDATA[
+			import org.foomo.zugspitze.commands.CommandHistory;
+			import org.foomo.zugspitze.managers.CommandManager;
+			import org.foomo.zugspitze.managers.StatusManager;
+
+			//-------------------------------------------------------------------------------------
+			// ~ Constants
+			//-------------------------------------------------------------------------------------
+
+			public static const STATE_LOADING:String = 'loading';
+			public static const STATE_EXAMPLE:String = 'example';
+
+			//-------------------------------------------------------------------------------------
+			// ~ Include
+			//-------------------------------------------------------------------------------------
+
+			include 'ViewInclude.as';
+
+			//-------------------------------------------------------------------------------------
+			// ~ Private methods
+			//-------------------------------------------------------------------------------------
+
+			private function showCursor():void
+			{
+				StatusManager.setBusyStatus(this);
+			}
+
+			private function hideCursor():void
+			{
+				StatusManager.removeBusyStatus(this);
+			}
+
+			private function switchStates():void
+			{
+				if (this.currentState == STATE_EXAMPLE) {
+					this.currentState = 'stackExample';
+					CommandManager.historyName = 'example';
+				} else {
+					this.currentState = STATE_EXAMPLE;
+					CommandManager.historyName = CommandHistory.DEFAULT_HISTORY;
+				}
+			}
+		]]>
+	</mx:Script>
+
+	<mx:states>
+		<mx:State name="loading">
+			<mx:SetProperty target="{this.loading}" name="visible" value="true"/>
+			<mx:SetProperty target="{this.panel}" name="visible" value="false"/>
+		</mx:State>
+		<mx:State name="example">
+			<mx:SetProperty target="{this.loading}" name="visible" value="false"/>
+			<mx:SetProperty target="{this.panel}" name="visible" value="true"/>
+		</mx:State>
+		<mx:State name="stackExample" basedOn="example">
+			<mx:SetProperty target="{this.counter1}" name="enabled" value="false"/>
+			<mx:SetProperty target="{this.counter2}" name="enabled" value="true"/>
+		</mx:State>
+	</mx:states>
+
+	<mx:Label id="loading" text="LOADING" horizontalCenter="0" verticalCenter="0"/>
+
+	<mx:HBox id="panel" horizontalCenter="0" verticalCenter="0">
+		<mx:Panel id="counter1" title="Counter Components">
+			<mx:VBox>
+				<counter:CounterComponent id="cc4"/>
+				<counter:CounterComponent id="cc5"/>
+				<counter:CounterComponent id="cc6"/>
+			</mx:VBox>
+		</mx:Panel>
+		<mx:Panel id="counter2" title="Focus Stack Example" enabled="false">
+			<mx:VBox>
+				<counter:CounterComponent id="cc1"/>
+				<counter:CounterComponent id="cc2"/>
+				<counter:CounterComponent id="cc3"/>
+			</mx:VBox>
+		</mx:Panel>
+		<mx:Panel title="Application Commands">
+			<mx:VBox>
+				<mx:Button label="No Undo" click="this.controller.noUndo()"/>
+				<mx:Button label="No Redo" click="this.controller.noRedo()"/>
+				<mx:Button label="Show Busy Cursor" click="this.controller.showBusyCursor()"/>
+				<mx:Button label="Dispatch Fault" click="this.controller.dispatchFault()"/>
+				<mx:Button label="Switch States" click="this.switchStates()"/>
+			</mx:VBox>
+		</mx:Panel>
+	</mx:HBox>
+</mx:Canvas>

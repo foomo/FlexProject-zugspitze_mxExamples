@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<simple:Application
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:simple="org.foomo.zugspitze.examples.applications.simple.*"
+	layout="absolute"
+	height="100%"
+	width="100%"
+	>
+	<mx:Style source="assets/css/Application.css"/>
+</simple:Application>
