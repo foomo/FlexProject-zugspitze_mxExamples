@@ -5,7 +5,7 @@ package org.foomo.zugspitze.examples.applications.commands.controllers
 	import org.foomo.zugspitze.examples.commands.NoRedoCommand;
 	import org.foomo.zugspitze.examples.commands.NoUndoCommand;
 	import org.foomo.zugspitze.examples.commands.ShowBusyCursorCommand;
-	import org.foomo.zugspitze.examples.applications.commands.models.CEModel;
+	import org.foomo.zugspitze.examples.applications.commands.models.ApplicationModel;
 	import org.foomo.zugspitze.examples.applications.commands.views.ApplicationView;
 	import org.foomo.zugspitze.core.ZugspitzeController;
 	import org.foomo.zugspitze.events.CommandEvent;
@@ -32,9 +32,9 @@ package org.foomo.zugspitze.examples.applications.commands.controllers
 		// ~ Private methods
 		//-----------------------------------------------------------------------------------------
 
-		private function get model():CEModel
+		private function get model():ApplicationModel
 		{
-			return CEModel(this.zugspitze.model);
+			return ApplicationModel(this.zugspitze.model);
 		}
 
 		private function get view():ApplicationView

@@ -5,5 +5,12 @@ package org.foomo.zugspitze.examples.applications.blank.models
 	[Bindable]
 	public class ApplicationModel extends ZugspitzeModel
 	{
+		//-----------------------------------------------------------------------------------------
+		// ~ Constructor
+		//-----------------------------------------------------------------------------------------
+
+		public function ApplicationModel()
+		{
+		}
 	}
 }

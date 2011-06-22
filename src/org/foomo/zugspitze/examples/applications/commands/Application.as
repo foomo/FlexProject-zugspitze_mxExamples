@@ -1,7 +1,7 @@
 package org.foomo.zugspitze.examples.applications.commands
 {
 	import org.foomo.zugspitze.examples.applications.commands.controllers.ApplicationController;
-	import org.foomo.zugspitze.examples.applications.commands.models.CEModel;
+	import org.foomo.zugspitze.examples.applications.commands.models.ApplicationModel;
 	import org.foomo.zugspitze.examples.applications.commands.views.ApplicationView;
 	import org.foomo.zugspitze.apps.FlexApplication;
 
@@ -22,7 +22,7 @@ package org.foomo.zugspitze.examples.applications.commands
 		{
 			super();
 			this.viewClass = ApplicationView;
-			this.modelClass = CEModel;
+			this.modelClass = ApplicationModel;
 			this.controllerClass = ApplicationController;
 			this.addEventListener(FlexEvent.CREATION_COMPLETE, this.creationCompleteHandler);
 		}

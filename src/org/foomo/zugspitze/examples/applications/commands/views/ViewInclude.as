@@ -1,10 +1,10 @@
+import flash.display.DisplayObject;
+
+import org.foomo.zugspitze.core.ZugspitzeView;
 import org.foomo.zugspitze.examples.applications.commands.Application;
 import org.foomo.zugspitze.examples.applications.commands.controllers.ApplicationController;
+import org.foomo.zugspitze.examples.applications.commands.models.ApplicationModel;
 import org.foomo.zugspitze.examples.applications.commands.views.ApplicationView;
-import org.foomo.zugspitze.examples.applications.simple.models.ApplicationModel;
-import org.foomo.zugspitze.core.ZugspitzeView;
-
-import flash.display.DisplayObject;
 
 /**
  * @private
