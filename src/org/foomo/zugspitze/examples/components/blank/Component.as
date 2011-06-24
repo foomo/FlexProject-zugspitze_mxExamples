@@ -3,13 +3,13 @@ package org.foomo.zugspitze.examples.components.blank
 	import org.foomo.zugspitze.examples.components.blank.controllers.ComponentController;
 	import org.foomo.zugspitze.examples.components.blank.models.ComponentModel;
 	import org.foomo.zugspitze.examples.components.blank.views.ComponentView;
-	import org.foomo.zugspitze.apps.CanvasApplication;
+	import org.foomo.zugspitze.apps.ZugspitzeCanvas;
 
 	import flash.events.Event;
 
 	import mx.events.FlexEvent;
 
-	public class Component extends CanvasApplication
+	public class Component extends ZugspitzeCanvas
 	{
 		//-----------------------------------------------------------------------------------------
 		// ~ Constructor
