@@ -5,6 +5,7 @@
 	<name>Flex 3 Examples</name>
 	<description>Flex 3 Examples.</description>
 	<dependencies>
+		<id>org.foomo.flash</id>
 		<id>org.foomo.zugspitze.core</id>
 		<id>org.foomo.zugspitze.flex3</id>
 	</dependencies>
