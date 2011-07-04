@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Application
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:blank="org.foomo.zugspitze.examples.components.blank.*"
+	xmlns:blank="org.foomo.zugspitze.mx.components.blank.*"
 	layout="absolute"
 	minWidth="955"
 	minHeight="600"
