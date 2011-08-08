@@ -10,22 +10,22 @@ import org.foomo.zugspitze.mx.applications.commands.views.ApplicationView;
  * @private
  */
 [Bindable]
-public var application:Application = Application(ZugspitzeView.init(DisplayObject(this)));
+public var application:org.foomo.zugspitze.mx.applications.commands.Application = org.foomo.zugspitze.mx.applications.commands.Application(ZugspitzeView.init(DisplayObject(this)));
 
 /**
  * @private
  */
 [Bindable]
-public var view:ApplicationView;
+public var view:org.foomo.zugspitze.mx.applications.commands.views.ApplicationView;
 
 /**
  * @private
  */
 [Bindable]
-public var model:ApplicationModel;
+public var model:org.foomo.zugspitze.mx.applications.commands.models.ApplicationModel;
 
 /**
  * @private
  */
 [Bindable]
-public var controller:ApplicationController;
+public var controller:org.foomo.zugspitze.mx.applications.commands.controllers.ApplicationController;
