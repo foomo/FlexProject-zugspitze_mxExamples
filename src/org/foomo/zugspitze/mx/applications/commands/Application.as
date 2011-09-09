@@ -45,7 +45,7 @@ package org.foomo.zugspitze.mx.applications.commands
 			this.viewClass = ApplicationView;
 			this.modelClass = ApplicationModel;
 			this.controllerClass = ApplicationController;
-			this.addEventListener(FlexEvent.CREATION_COMPLETE, this.creationCompleteHandler);
+			this.addEventListener(ZugspitzeEvent.ZUGSPITZE_COMPLETE, this.zugspitzeCompleteHandler);
 		}
 
 		//-----------------------------------------------------------------------------------------
@@ -61,7 +61,7 @@ package org.foomo.zugspitze.mx.applications.commands
 		// ~ Private Eventhandler
 		//-----------------------------------------------------------------------------------------
 
-		private function creationCompleteHandler(event:Event):void
+		private function zugspitzeCompleteHandler(event:ZugspitzeEvent):void
 		{
 			ApplicationController(this.controller).init();
 		}

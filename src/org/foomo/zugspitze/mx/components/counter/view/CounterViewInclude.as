@@ -10,19 +10,19 @@ public function get application():CounterComponent
 	return View.getApplication(this).application as CounterComponent;
 }
 
-[Bindable(event="zugspitzeViewChanged")]
+[Bindable(event="zugspitzeViewChange")]
 public function get view():CounterView
 {
 	return View.getApplication(this).model as CounterView;
 }
 
-[Bindable(event="zugspitzeModelChanged")]
+[Bindable(event="zugspitzeModelChange")]
 public function get model():CounterModel
 {
 	return View.getApplication(this).model as CounterModel;
 }
 
-[Bindable(event="zugspitzeControllerChanged")]
+[Bindable(event="zugspitzeControllerChange")]
 public function get controller():CounterController
 {
 	return View.getApplication(this).controller as CounterController;

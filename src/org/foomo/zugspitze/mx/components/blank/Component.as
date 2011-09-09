@@ -20,6 +20,7 @@ package org.foomo.zugspitze.mx.components.blank
 
 	import mx.events.FlexEvent;
 
+	import org.foomo.zugspitze.events.ZugspitzeEvent;
 	import org.foomo.zugspitze.mx.components.blank.controllers.ComponentController;
 	import org.foomo.zugspitze.mx.components.blank.models.ComponentModel;
 	import org.foomo.zugspitze.mx.components.blank.views.ComponentView;
@@ -42,14 +43,14 @@ package org.foomo.zugspitze.mx.components.blank
 			this.viewClass = ComponentView;
 			this.modelClass = ComponentModel;
 			this.controllerClass = ComponentController;
-			this.addEventListener(FlexEvent.CREATION_COMPLETE, this.creationCompleteHandler);
+			this.addEventListener(ZugspitzeEvent.ZUGSPITZE_COMPLETE, this.zugspitzeCompleteHandler);
 		}
 
 		//-----------------------------------------------------------------------------------------
 		// ~ Private Eventhandler
 		//-----------------------------------------------------------------------------------------
 
-		private function creationCompleteHandler(event:Event):void
+		private function zugspitzeCompleteHandler(event:ZugspitzeEvent):void
 		{
 			ComponentController(this.controller).initialize();
 		}
